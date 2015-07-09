@@ -1,0 +1,13 @@
+<div class="page-header">
+  <h1>Movies <small>Our collection of Movies.</small></h1>
+</div>
+<%= render partial: 'shared/search' %>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="list-group">
+      <% @movies.each do |movie| %>
+        <%= link_to movie.title, movie_path(movie.id), class: 'list-group-item'  %></td>
+      <% end %>
+    </div>
+  </div><!-- /.col-lg-12 -->
+</div><!-- /.row -->
